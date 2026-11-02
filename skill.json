@@ -1,0 +1,25 @@
+{
+  "name": "genpark-personal-agent-cerebral-blood-flow-orthostatic-perfusion-skill",
+  "version": "1.0.0",
+  "description": "Calculates Middle Cerebral Artery (MCA) mean velocity, Gosling Pulsatility Index (PI), Pourcelot Resistive Index (RI), and hypocapnic vasoconstriction shifts.",
+  "tools": [
+    {
+      "name": "calculate_cerebral_perfusion_and_pulsatility",
+      "description": "Calculates Gosling Pulsatility Index (PI), Resistive Index (RI), and microvascular resistance tier.",
+      "parameters": {
+        "peak_systolic_velocity_cms": "float (default 95.0)",
+        "end_diastolic_velocity_cms": "float (default 42.0)",
+        "mean_flow_velocity_cms": "float (default 60.0)"
+      }
+    },
+    {
+      "name": "model_hypocapnic_hyperventilation_vasoconstriction",
+      "description": "Calculates cerebral blood flow velocity drop and vasoconstriction induced by acute hypocapnia.",
+      "parameters": {
+        "current_etco2_mmhg": "float (default 28.0)",
+        "baseline_etco2_mmhg": "float (default 40.0)",
+        "baseline_mca_velocity_cms": "float (default 62.0)"
+      }
+    }
+  ]
+}
